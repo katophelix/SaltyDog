@@ -10,8 +10,8 @@
  }
  </style>'; 
 
- $to_email  = "retail@saltydog.com"; //recepient
-//  $to_email    = "kat@saltydog.com"; //recepient
+//  $to_email  = "retail@saltydog.com"; //recepient
+ $to_email    = "kat@saltydog.com"; //recepient
 
 // $from_email   = "retail@saltydog.com"; //from email using site domain.
 
@@ -44,7 +44,7 @@ if($_POST){
     $RegisterOne   = $_POST["RegisterOne"] ; //capture sender email
     $RegisterTwo  = $_POST["RegisterTwo"];
 
-    $TotalTransations  = $_POST["TotalTransations"];
+    $TotalTransactions  = $_POST["TotalTransactions"];
     $Notes = $_POST["Notes"];
 
 
@@ -75,6 +75,10 @@ if($_POST){
 
     $message_body .=  "Register One: ".$RegisterOne ."\n";
     $message_body .=  "Register Two: ".$RegisterTwo."\n";
+
+    $message_body .=  "------------------------------\n";
+
+    $message_body .=  "Total Transaction: ".$TotalTransactions."\n";
 
     $message_body .=  "------------------------------\n";
  

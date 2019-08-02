@@ -90,7 +90,11 @@ font-size: 1em;
         <form action="add_song.php" method="post">
           <div class="form-group">
             <label for="song">Song Title</label>
-            <input type="text" class="form-control" id="song" name="song" required>
+            <input type="text" class="form-control" id="song" name="song" required maxlength="30">
+          </div>
+          <div class="form-group">
+            <label for="song">Artist</label>
+            <input type="text" class="form-control" id="artists" name="artists" required maxlength="25">
           </div>
           <div class="form-group">
             <label for="name">Your Name</label>

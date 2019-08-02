@@ -25,13 +25,14 @@ if (!$conn) {
 
 
 $song_title = ($_POST['song']);
+$artist = ($_POST['artists']);
 $submitter = ($_POST['name']);
 $location = ($_POST['location']);
 $created = date("Y-m-d H:i:s");
 $link_address = 'https://tv.saltydog.com/';
 
-$sql = 'INSERT INTO requests (song_title, submitter, location, created, ip)
-VALUES ("' . $song_title . '", "' . $submitter . '", "' . $location . '", "' . $created . '", "' . $ip . '")';
+$sql = 'INSERT INTO requests (song_title, artists, submitter, location, created, ip)
+VALUES ("' . $song_title . '", "' . $artist . '", "' . $submitter . '", "' . $location . '", "' . $created . '", "' . $ip . '")';
 
 if (mysqli_query($conn, $sql)) {
     echo ("<SCRIPT LANGUAGE='JavaScript'>

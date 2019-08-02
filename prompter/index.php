@@ -59,23 +59,58 @@ $result->free();
     <![endif]-->
   </head>
   <body>
+<style>
 
 
 
-  <div class="container text-center">
+.table {
+    margin: 0 0 0 0;
+    font-family: Arial;
+ font-size:2vw;
+    width: 100%;
+    overflow: hidden;
+}
+    
+  .row {
+    margin: 0 0 0 0;
+    font-family: Arial;
+   
+    width: 100%;
+    overflow: hidden;
+ }
+ 
+   .col {
+    margin: 0 0 0 0;
+    font-family: Arial;
+   
+    width: 100%;
+    overflow: hidden;
+ }
+ 
+ </style>
+
+
+  <div class="container-fluid text-center" style="width:100%; font-size:33px">
     <div class="row">
-      <div class="col-xs-12">
-        <h1>Salty Dog Song Prompter</h1>        
+      <div class="col">
+      
+     <br>
+       
+       
+     <h3>  <?php echo  date("m-d-Y") ;  ?>     <h3>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xs-12">
-      <table class="table table-striped">
+    <div class="row"style="width:100%">
+      <div class="col" style="width:100%">
+      <table width="100%" class="table table-striped" >
   <thead>
     <tr>
-    <th>Song Title</th>
+             <th>Song Title</th>
+             <th>Artist</th>
               <th>Requested By</th>
+              
+             
               <th>Location</th>
     </tr>
   </thead>
@@ -84,9 +119,10 @@ $result->free();
  <?php foreach($result AS $request): ?>
   <tr>
     <td><?php echo $request['song_title']; ?></td>
+    <td><?php echo $request['artists']; ?></td>
     <td><?php echo $request['submitter']; ?></td>
-    <td><?php echo $request['created']; ?></td>
-    <td><?php echo $request['whenadd']; ?></td>
+    
+   
     <td>
       <?php if(!empty($request['location'])): ?>
         <?php if($request['location'] == 1): ?>
@@ -96,6 +132,7 @@ $result->free();
         <?php endif; ?>
       <?php endif; ?>
     </td>
+    <td><?php echo $request['whenadd']; ?></td>
   </tr>
 <?php endforeach; ?>  
 
