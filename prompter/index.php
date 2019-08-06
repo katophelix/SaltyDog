@@ -138,11 +138,15 @@ $result->free();
 
 </tbody>
 </table>
-        
+
 
       </div>
     </div>
+<br>
 
+<br>
+
+<a href="https://saltydog.com/prompter/clear.php">Clear All</a>
   </div>
 
 
