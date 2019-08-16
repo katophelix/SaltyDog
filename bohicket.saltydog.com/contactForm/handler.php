@@ -14,15 +14,14 @@ use FormGuide\Handlx\FormHandler;
 $pp = new FormHandler(); 
 
 $validator = $pp->getValidator();
-$validator->fields(['Name','Email'])->areRequired()->maxLength(50);
-$validator->field('Email')->isEmail();
-$validator->field('Message')->maxLength(6000);
+$validator->fields(['name','email'])->areRequired()->maxLength(50);
+$validator->field('email')->isEmail();
+$validator->field('message')->maxLength(6000);
 
 
-$pp->requireReCaptcha();
-$pp->getReCaptcha()->initSecretKey('6Lckc5YUAAAAAOGDBbPbDwn-ooUoT5Cbpk0YqTVN');
+$pp->requireCaptcha();
 
 
-$pp->sendEmailTo('bodoginfo@saltydog.com'); // ← Your email here
+$pp->sendEmailTo('contact@saltydog.com'); // ← Your email here
 
 echo $pp->process($_POST);
