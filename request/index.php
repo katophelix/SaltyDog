@@ -78,6 +78,8 @@ font-size: 1em;
                 }
             </style>
 
+    
+
   <div class="container justify-content-center ">
   <div class="row justify-content-center" style="margin-top: 10px;">
       <div class="col justify-content-center">
@@ -90,7 +92,7 @@ font-size: 1em;
         <form action="add_song.php" method="post">
           <div class="form-group">
             <label for="song">Song Title</label>
-            <input type="text" class="form-control" id="song" name="song" required maxlength="30">
+            <input type="text" class="form-control" id="song" name="song" required maxlength="30" >
           </div>
           <div class="form-group">
             <label for="song">Artist</label>
@@ -106,7 +108,8 @@ font-size: 1em;
               <option value="1">The Cafe Deck</option>
               <option value="2">Live on the Internet</option>
             </select>
-          </div>          
+          </div>  
+        
 <br>
           <input type="submit"  class="btn btn-primary" value="Request Song (Limit 3)">
         </form>

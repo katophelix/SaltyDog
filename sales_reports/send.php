@@ -10,8 +10,8 @@
  }
  </style>'; 
 
-//  $to_email  = "retail@saltydog.com"; //recepient
- $to_email    = "kat@saltydog.com"; //recepient
+ $to_email  = "retail@saltydog.com"; //recepient
+//  $to_email    = "kat@saltydog.com"; //recepient
 
 // $from_email   = "retail@saltydog.com"; //from email using site domain.
 

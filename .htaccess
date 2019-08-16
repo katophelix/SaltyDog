@@ -1,0 +1,501 @@
+
+RewriteOptions inherit
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^saltydog\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^(.*)$ https://www.saltydog.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^lucky\/lucky8\ form\/lucky8\.html\/?(.*)$ "https\:\/\/saltydog\.com\/lucky8$1" [R=301,L]
+
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET,PUT,POST,DELETE"
+Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+# Header set Access-Control-Allow-Origin: "http://98.101.223.10:8011"
+
+
+ErrorDocument 404 /404.html
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/bohicket\.html\/?(.*)$ "https\:\/\/bohicket\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/chat\.html\/?(.*)$ "https\:\/\/saltydog\.com\/chat$1" [R=302,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/chefs\.html\/?(.*)$ "https\:\/\/saltydog\.com\/chefs$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/findus\.html\/?(.*)$ "https\:\/\/saltydog\.com\/map$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/kids\.html\/?(.*)$ "https\:\/\/saltydog\.com\/kids$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/radio\.html\/?(.*)$ "https\:\/\/saltydog\.com\/radio$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/seapines\.html\/?(.*)$ "https\:\/\/saltydog\.com\/seapines$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/social\.html\/?(.*)$ "https\:\/\/saltydog\.com\/social$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/stores\.html\/?(.*)$ "https\:\/\/saltydog\.com\/stores$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/tideChart\.html\/?(.*)$ "https\:\/\/saltydog\.com\/tidechart$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/noDogs\.html\/?(.*)$ "https\:\/\/saltydog\.com\/nodogs$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^feedback\/feedback\.html\/?(.*)$ "https\:\/\/saltydog\.com\/feedback$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^feedback\-retail\/feedbackretail\.html\/?(.*)$ "https\:\/\/saltydog\.com\/feedback\-retail$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^donation\/donation\.html\/?(.*)$ "https\:\/\/saltydog\.com\/donation$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^employment\/employment\.html\/?(.*)$ "https\:\/\/saltydog\.com\/employment$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^contact\/contact\.html\/?(.*)$ "https\:\/\/saltydog\.com\/contact$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^lucky\/win\.html\/?(.*)$ "https\:\/\/saltydog\.com\/lucky$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Legend\/legend\.html\/?(.*)$ "https\:\/\/saltydog\.com\/legend$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^tides\/tides\.html\/?(.*)$ "https\:\/\/saltydog\.com\/tides$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^daily\-special\/dailySpec\.php\/?(.*)$ "https\:\/\/saltydog\.com\/daily\-special$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/events\.html\ $ "https\:\/\/saltydog\.com\/events\ to\ go\ to\ events\.saltydog\.com" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/events\.html\/?(.*)$ "https\:\/\/saltydog\.com\/events$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/chat\.html\/?(.*)$ "https\:\/\/saltydog\.com\/chat$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/chefs\.html\/?(.*)$ "https\:\/\/saltydog\.com\/chefs$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/findus\.html\/?(.*)$ "https\:\/\/saltydog\.com\/map$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/kids\.html\/?(.*)$ "https\:\/\/saltydog\.com\/kids$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/radio\.html\/?(.*)$ "https\:\/\/saltydog\.com\/radio$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/seapines\.html$ "https\:\/\/saltydog\.com\/seapines" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/social\.html\/?(.*)$ "https\:\/\/saltydog\.com\/social$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/stores\.html\/?(.*)$ "https\:\/\/saltydog\.com\/stores$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/video\.html\ \/?(.*)$ "https\:\/\/saltydog\.com\/videos$1" [R=302,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/tideChart\.html\/?(.*)$ "https\:\/\/saltydog\.com\/tidechart$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/calendar\.html\/?(.*)$ "https\:\/\/saltydog\.com\/calendar$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^cruise\/cruise\.html\/?(.*)$ "https\:\/\/saltydog\.com\/cruise$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/live\.html\/?(.*)$ "https\:\/\/tv\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/video\.html\/?(.*)$ "https\:\/\/saltydog\.com\/videos$1" [R=301,L]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^pages\/webcams\/$ "http\:\/\/saltydogcafe\.com\/webcams\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/dine\.html\/?(.*)$ "https\:\/\/saltydog\.com\/dine\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/calendar\.html\ \/?(.*)$ "https\:\/\/cal\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^cruise\/cruise\.html\/?(.*)$ "https\:\/\/cruise\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^cruise\/?(.*)$ "https\:\/\/cruise\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/calendar\.html\ \/?(.*)$ "https\:\/\/cal\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/calendar\.html\ \/?(.*)$ "https\:\/\/cal\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/events\.html\ \/?(.*)$ "https\:\/\/events\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/bluff\-dinner\.html\/?(.*)$ "https\:\/\/saltydog\.com\/dine\/bluffdog\-dinner\.html$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/cafe\.html\/?(.*)$ "https\:\/\/saltydog\.com\/dine\/cafe\.html$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/SDCLunchMenu\.html\/?(.*)$ "https\:\/\/saltydog\.com\/dine\/SDCLunchMenu\.html$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/?(.*)$ "https\:\/\/saltydog\.com\/dine\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^bohicket\.saltydog\.com\/?(.*)$ "https\:\/\/bohicket\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/events\.html$ "https\:\/\/events\.saltydog\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/calendar\.html$ "https\:\/\/cal\.saltydog\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/live2\.html$ "https\:\/\/www\.tv\.saltydog\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/bohicket\.html\ \/?(.*)$ "https\:\/\/bohicket\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^events\/?(.*)$ "https\:\/\/events\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^calendar\/?(.*)$ "https\:\/\/cal\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Pages\/live2\.html\/?(.*)$ "https\:\/\/www\.tv\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^livemusic\/?(.*)$ "https\:\/\/www\.tv\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/calendar\.html\ \/?(.*)$ "https\:\/\/cal\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/events\.html\/?(.*)$ "https\:\/\/events\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^sd\/live\.html\ \/?(.*)$ "https\:\/\/www\.tv\.saltydog\.com\/$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/bluffdog\.html\/?(.*)$ "https\:\/\/saltydog\.com\/dine\/bluffdog\.html$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/bluffdog\-lunch\.html\/?(.*)$ "https\:\/\/saltydog\.com\/dine\/bluffdog\-lunch\.html$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/cater\.html\/?(.*)$ "https\:\/\/saltydog\.com\/dine\/cater\.html$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/icecream\.html\/?(.*)$ "https\:\/\/saltydog\.com\/dine\/icecream\.html$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^Dine\/caterbrochure\.html\/?(.*)$ "https\:\/\/saltydog\.com\/dine\/caterbrochure\.html$1" [R=301,L]
+RewriteCond %{HTTP_HOST} ^saltydog\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.saltydog\.com$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^selfie\.saltydog\.com$ "https\:\/\/selfie\.saltydog\.com\/" [R=301,L]
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php5_module>
+   php_flag asp_tags Off
+   php_flag display_errors Off
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 128M
+   php_value post_max_size 51M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 50M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag asp_tags Off
+   php_flag display_errors Off
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 128M
+   php_value post_max_size 51M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 50M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php56 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

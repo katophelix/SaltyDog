@@ -33,11 +33,11 @@ window.addEventListener('load', function()
         // Check response is ready or not
         if(xhr.readyState == 4 && xhr.status == 200)
         {
-            dataDiv = document.getElementById('liveData');
+            dataDiv = document.getElementById("liveData").innerHTML = array[0];
             // Set current data text
             dataDiv.innerHTML = xhr.responseText;
             // Update the live data every 1 sec
-            setTimeout(updateLiveData(), 30000);
+            setTimeout(updateLiveData(), 60000);
         }
     }
 });

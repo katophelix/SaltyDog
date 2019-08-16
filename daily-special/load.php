@@ -6,7 +6,7 @@
 
 
 
- <?php
+// <?php
 
 // $data = json_decode(file_get_contents("data.txt"), true); // true for assoc
 

@@ -71,7 +71,7 @@
             background-size: cover;
             /* border: 5px solid rgb(167, 245, 232); */
 
-            height: 600px;
+            height: 500px;
             width: 300px;
 
 
@@ -96,7 +96,7 @@
         body {
             color: rgb(4, 4, 51);
 background-color:#E3F4FA;
-            max-height: 700px;
+            max-height: 600px;
             max-width: 400px;
         }
 
@@ -137,14 +137,8 @@ background-color:#E3F4FA;
 
                 <div class="row">
                     <div class="col" style="padding-top: 5px">
-                    <audio src="http://98.101.223.10:8011" id="my_audio" loop="loop"></audio>
-  <script type="text/javascript">
-    window.onload=function(){
-      document.getElementById("my_audio").play();
-    }
-  </script>
 
-                        <!-- <audio id="radioplayer" src="http://98.101.223.10:8011" autoplay="autoplay"></audio> -->
+                        <audio id="radioplayer" src="http://98.101.223.10:8011" autoplay="autoplay"></audio>
                         <a href="#" onclick="document.getElementById('radioplayer').play()"><button type="button"
                                 class="btn btn-secondary btn-sm">PLAY!</button></a>
                         <a href="#" onclick="document.getElementById('radioplayer').pause()"><button type="button"
@@ -166,13 +160,14 @@ background-color:#E3F4FA;
 
                 </div>
             </div>
-            <?php include 'script.php' ; ?> 
-
-            <div class="row">
+<!-- Read json and display title of track using php. This will print the item on your page. I use this in a shortcode via a shortcode plugin. -->
+<div class="row">
                     <div class="col" style="padding-top: 5px">
-                    <h2 class="card-title"><?php echo $title; ?>  </h2>
-                    <h2 class="card-title"><?php echo $artist; ?>  </h2>
-                    </div>
+
+<?php include 'script.php' ; ?> 
+
+</div>
+</div>
             <script type="text/javascript">
                 function setVolume() {
                     document.getElementById("radioplayer").volume

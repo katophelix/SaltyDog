@@ -129,12 +129,15 @@
 
 <font size="3" color="navy" face="verdana">
 
-<b>WATCH LIVE HERE!</b>
+<b>WATCH LIVE or PRE-RECORDED HERE!</b>
 <br>
-<img src="sing.gif"  >
-
+<img src="sing.gif"  ></a>
+<br>Live Requests go to saltydog.com/request/
+<br>
+<button><a href="https://saltydog.com/request/">Send A Live Request</a></button>
+<br>
 </font>
-</a>
+
 
 
 
@@ -151,8 +154,8 @@
 	
 
 <div style="width:100%;text-align:center;padding-bottom:20px;"> <font size="2" color="#000000" face="avenir next">Download the Livestream App for uninterrupted audio streaming<br><br><div style="clear:both;"></div>
-<font size="3" color="navy" face="avenir next">*Salty Dog Live is multi-platform and streams on all devices 
-including:<br> Apple, Windows, Android, Samsung Smart TV's, Roku, etc.</font></font> <div style="padding-top:10px;width:270px;margin:0 auto;">
+<font size="3" color="navy" face="avenir next">*Salty Dog Live is multi-platform and streams on most devices 
+including:<br>Apple devices including Apple TV, Windows, Android, etc.</font></font> <div style="padding-top:10px;width:270px;margin:0 auto;">
 
 <div style="float:left;width:125px;margin-right:20px;"><a href="https://play.google.com/store/apps/details?id=com.livestream.livestream&hl=en" target="livestream"><img src="google.png" width="125"></a></div>
 <div style="float:left;width:125px;"><a href="https://itunes.apple.com/us/app/livestream/id493086499?mt=8" target="livestream"><img src="itunes.png" width="125"></a></div>

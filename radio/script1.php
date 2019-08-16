@@ -39,23 +39,10 @@ $stream_result = $json_data["data"]; #monitor result body.
 $stream_status = $json_data["status"]; #status=0 means data is No Result.
 #do something...
  
-echo "yhre";
+echo "OK";
 ?> 
 
- <!-- <?php
-
-$fp = fopen( '/tmp/callback.txt', 'a' );
-fwrite( $fp, $_REQUEST['alertra_name']
-   . "," . $_REQUEST['alertra_deviceid'] 
-   . "," . $_REQUEST[ 'alertra_last_code' ]
-   . "," . $_REQUEST[ 'alertra_last_msg'] 
-   . "," . $_REQUEST[ 'alertra_last_proto_code']
-   . "," . $_REQUEST[ 'alertra_last_proto_msg']
-   . "," . $_REQUEST[ 'alertra_timestamp']
-   . "\n" );
-
-?> -->
-<?php 
+<?php
 
 $dir = "data.txt";
 if(!is_writable($dir)){
@@ -66,28 +53,6 @@ if (!empty($_REQUEST["search"])) {
     
     $input = $_REQUEST["search"];
     $bitecount = file_put_contents($dir, $input, FILE_APPEND);
-    $filename = "data.txt";
-$data = file_get_contents('php://input');
-file_put_contents($filename, $data."\n", FILE_APPEND);
-
-
-$json_data = json_decode($data, true);
-$stream_id = $json_data["stream_id"];
-$stream_url = $json_data["stream_url"];
-$stream_result = $json_data["data"]; #monitor result body.
-$stream_status = $json_data["status"]; #status=0 means data is No Result.
-$dir = "data.txt";
-if(!is_writable($dir)){
-    echo "cannot write to file";
-}
-
-if (!empty($_REQUEST["search"])) {
-    
-    $input = $_REQUEST["search"];
-    $bitecount = file_put_contents($dir, $input, FILE_APPEND);
-    $filename = "data.txt";
- 
-echo "yhre";
 }
 echo $bitecount . " bites were written to the file";
 echo $title;

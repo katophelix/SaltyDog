@@ -15,7 +15,7 @@ if(isset($_POST['message'])){
 }
 $bob = 'bob@saltydog.com';
 $tim = 'tim@saltydog.com';
-$kat = 'kat@saltydog.com';
+$forms = 'forms@saltydog.com';
 
 $sent = 'yes';
 $email = new PHPMailer();
@@ -25,7 +25,7 @@ $email->Subject   = 'Hi from '.$name2.' at the Salty Dog Cafe';
 $email->Body      = $message;
  $email->AddBCC($bob);
 $email->AddBCC($tim);
-$email->AddBCC($kat);
+$email->AddBCC($forms);
 
 $email->AddAddress( $email2 );
 

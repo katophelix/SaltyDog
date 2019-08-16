@@ -1,6 +1,6 @@
 <?php 
 $errors = '';
-$myemail = 'kat@saltydog.com';//<-----Put Your email address here.
+$myemail = 'radio@saltydog.com';//<-----Put Your email address here.
 $from = 'radio@saltydog.com';//<-----Put Your email address here.
 if(empty($_POST['name'])  || 
    empty($_POST['artist']) )
